@@ -22,4 +22,4 @@ Kaggle에서 제공되는 MNIST 이미지 분류 data에 대하여, Pytorch를 �
 - (Hidden layer) 세 가지 모델 모두 2개의 hidden layer를 설정
 - (Output Unit) class 개수와 동일하게 10으로 설정
 - (Hidden Unit) 세 가지 모델에 따라 차이를 둠
--- (Model 1) 784 (Input) -> 16 (Hidden 1) -> 32 (Hidden 2) -> 10 (Output)
+> (Model 1) 784 (Input) -> 16 (Hidden 1) -> 32 (Hidden 2) -> 10 (Output)
