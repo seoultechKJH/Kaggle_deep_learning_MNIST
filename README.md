@@ -27,7 +27,7 @@ Kaggle에서 제공되는 MNIST 이미지 분류 data에 대하여, Pytorch를 �
   - (Model 3) 784 (Input) -> 526 (Hidden 1) -> 268 (Hidden 2) -> 10 (Output)
 - (Learning rate) 모델별 차이를 두어, Model 1부터 3으로 갈수록 learning rate를 낮추어 gradient를 미세 조정하며 탐색하도록 함
   - (Model 1) 0.1 / (Model 2) 0.05 / (Model 3) 0.01
-- (epoch) 세 가지 모델이 동일하게 10번 수행함
+- (epoch) 세 가지 모델에 대해 동일하게 10번 수행함
 - (Regularization) Model 1은 별도의 조작을 가하지 않고 수행했으며, Model 2에는 Data Augmentation, Model 3에서는 Model 2에 추가로 Dropout을 적용하여 변화를 보고자 함
   - (Data Augmentation) training data를 증가시켜 학습 성능을 좋게하고 overfitting을 방지할 수 있음. 해당 실험에서는 이미지 좌우를 뒤집는 가로 대칭이동방법(RandomHorizontalFlip)을 사용하여 training set을 2배 증가시킴
   - (Dropout) 학습 진행과정에서 신경망 모델의 일부를 사용하지 않으므로써 overfitting을 방지함
