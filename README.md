@@ -23,3 +23,23 @@ Kaggle에서 제공되는 MNIST 이미지 분류 data에 대하여, Pytorch를 �
 - (Output Unit) class 개수와 동일하게 10으로 설정
 - (Hidden Unit) 세 가지 모델에 따라 차이를 둠
   - (Model 1) 784 (Input) -> 16 (Hidden 1) -> 32 (Hidden 2) -> 10 (Output)
+  - (Model 2) 784 (Input) -> 100 (Hidden 1) -> 100 (Hidden 2) -> 10 (Output)
+  - (Model 3) 784 (Input) -> 526 (Hidden 1) -> 268 (Hidden 2) -> 10 (Output)
+- (Learning rate) 모델별 차이를 두어, Model 1부터 3으로 갈수록 learning rate를 낮추어 gradient를 미세 조정하며 탐색하도록 함
+  - (Model 1) 0.1 / (Model 2) 0.05 / (Model 3) 0.01
+- (epoch) 세 가지 모델이 동일하게 10번 수행함
+- (Regularization) Model 1은 별도의 조작을 가하지 않고 수행했으며, Model 2에는 Data Augmentation, Model 3에서는 Model 2에 추가로 Dropout을 적용하여 변화를 보고자 함
+  - (Data Augmentation) training data를 증가시켜 학습 성능을 좋게하고 overfitting을 방지할 수 있음. 해당 실험에서는 이미지 좌우를 뒤집는 가로 대칭이동방법(RandomHorizontalFlip)을 사용하여 training set을 2배 증가시킴
+  - (Dropout) 학습 진행과정에서 신경망 모델의 일부를 사용하지 않으므로써 overfitting을 방지함
+
+
+# Result
+- logistic regression
+  - 모델의 최종 loss가 0.895, accuracy가 0.715이며, Shirt에 대한 분류가 가장 어려움
+- Feedforward Neural Network Model 1
+  - 모델의 최종 loss가 0.453, accuracy가 0.838이며, Shirt에 대한 분류가 가장 어려움
+- Feedforward Neural Network Model 2
+  - 모델의 최종 loss가 0.408, accuracy가 0.854이며, Pullover에 대한 분류가 가장 어려움
+- Feedforward Neural Network Model 3
+  - 모델의 최종 loss가 0.477, accuracy가 0.833이며, Shirt에 대한 분류가 가장 어려움
+- (결론) FNN Model 2가 accuracy 측면에서 가장 좋은 성능을 보였으며, Shirt class에 대한 분류가 가장 어려운 것으로 확인됨
