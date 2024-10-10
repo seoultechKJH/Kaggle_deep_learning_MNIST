@@ -1,5 +1,7 @@
 # Kaggle_deep_learning_MNIST
-Kaggle에서 제공되는 Fashion MNIST 이미지 분류 data에 대하여, Pytorch를 통한 딥러닝 Feedforward Neural Network 모델 설계 및 분석 - 테크니컬 포트폴리오 기술평가항목 : 1
+Kaggle에서 제공되는 Fashion MNIST 이미지 분류 data에 대하여, Pytorch를 통한 딥러닝 Feedforward Neural Network 모델 설계 및 분석
+
+- 테크니컬 포트폴리오 기술평가항목 : 1, 7
 
 
 # Dataset
